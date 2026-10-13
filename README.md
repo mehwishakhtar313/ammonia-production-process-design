@@ -1,101 +1,120 @@
-# Design of an Ammonia Production Unit with Optimized Energy Index
+# Design and Energy Optimization of an Ammonia Production Unit
 
-**Final Year Design Project | B.E. Chemical Engineering | NUST | 2025**
+**Final Year Design Project | Chemical Engineering | NUST | 2025**
 
-## Project Overview
+---
 
-This project focused on the process design and energy optimization of an industrial ammonia production unit based on the Haber–Bosch process. The study investigated the effects of reactor dimensions and operating parameters on conversion, hydrogen production, and overall energy consumption, with particular attention to steam and furnace fuel usage.
+## <u>Project Overview</u>
 
-Aspen Plus V14 was used to simulate the ammonia production process and conduct sensitivity analyses. The project also included material and energy balances, reactor design, heat-exchanger calculations, preliminary economic analysis, process control, and HAZOP analysis.
+This project focused on the process design and energy optimization of an industrial ammonia production unit based on the Haber–Bosch process. The study investigated reactor design, operating conditions, energy requirements, and process efficiency.
 
-## Objectives
+Aspen Plus V14 was used to simulate the ammonia production process and conduct sensitivity analyses. The project also incorporated material and energy balances, reactor kinetics, equipment design, preliminary economic evaluation, process control, and HAZOP analysis.
 
-- Develop an Aspen Plus simulation of an ammonia production process.
+## <u>Project Objectives</u>
+
+- Develop an Aspen Plus simulation of an ammonia production unit.
 - Perform material and energy balances across major process units.
-- Investigate the effects of reactor dimensions and operating conditions on conversion.
-- Evaluate operating parameters to identify suitable conditions for process efficiency.
-- Design selected equipment and assess the preliminary economic feasibility of the plant.
-- Identify process hazards and consider instrumentation and control strategies.
+- Investigate the influence of reactor dimensions and operating parameters on conversion.
+- Identify suitable operating conditions through sensitivity analysis.
+- Design selected process equipment and assess preliminary economic feasibility.
+- Evaluate process safety and control requirements.
 
-## Process Description
+## <u>Ammonia Production Process</u>
 
-The simulated process covers the main stages of conventional ammonia production:
+The simulated process follows the principal stages of conventional ammonia production:
 
 1. **Feed preparation and desulfurization:** Removal of sulfur compounds from the natural gas feed.
-2. **Steam reforming:** Conversion of hydrocarbons into hydrogen-rich synthesis gas in the pre-reformer and primary reformer.
-3. **Secondary reforming:** Introduction of air to support further reforming and provide nitrogen for ammonia synthesis.
-4. **Shift conversion:** Conversion of carbon monoxide into carbon dioxide while generating additional hydrogen.
-5. **CO₂ removal and methanation:** Removal of carbon dioxide and residual carbon oxides.
-6. **Ammonia synthesis:** Reaction of hydrogen and nitrogen in the synthesis loop, followed by ammonia separation.
+2. **Steam reforming:** Conversion of hydrocarbons into hydrogen-rich synthesis gas.
+3. **Secondary reforming:** Further reforming with air, which also introduces nitrogen for ammonia synthesis.
+4. **Shift conversion:** Conversion of carbon monoxide into carbon dioxide while producing additional hydrogen.
+5. **Carbon dioxide removal and methanation:** Removal of carbon dioxide and residual carbon oxides.
+6. **Ammonia synthesis:** Reaction of hydrogen and nitrogen to produce ammonia, followed by product separation.
 
-### Overall Process
+### Overall Process Diagram
+
+> **Figure:** General ammonia production process.
 
 ![Overall ammonia production process](images/ammonia_overall_process.png)
 
+## <u>Aspen Plus Process Simulation</u>
 
-### Aspen Plus Simulation
+The ammonia production process was modelled in Aspen Plus V14. The flowsheet represents the major process units and their interconnecting streams.
 
-![Aspen Plus process flowsheet](images/ammonia_process_flowsheet.png)
+> **Figure 1:** Aspen Plus process flow diagram developed for the ammonia production unit (Figure 22 in the thesis, printed page 73).
 
-## Methodology
+![Aspen Plus ammonia process flowsheet](images/ammonia_process_flowsheet.png)
+
+## <u>Methodology</u>
 
 ### 1. Process Simulation
 
-- Developed the process flowsheet in Aspen Plus V14.
-- Configured process components and thermodynamic property methods, including Peng–Robinson, SRK, and Steam NBS as documented in the thesis.
-- Modelled catalytic reforming reactors using Langmuir–Hinshelwood–Hougen–Watson (LHHW) kinetics.
-- Applied simplified rate expressions to the high-temperature shift, low-temperature shift, and methanator sections.
+- Developed the ammonia production flowsheet in Aspen Plus V14.
+- Configured process components and thermodynamic property methods, including Peng–Robinson, SRK, and Steam NBS, as documented in the project report.
+- Applied Langmuir–Hinshelwood–Hougen–Watson (LHHW) kinetics to the pre-reformer, primary reformer, and secondary reformer.
+- Used simplified rate expressions for the high-temperature shift converter, low-temperature shift converter, and methanator.
 
 ### 2. Material and Energy Balances
 
-Performed material balances across major process units and evaluated energy balances for selected equipment and process sections. These calculations supported the process design and assessment of utility requirements.
+Material balances were performed across the major process units. Energy balances and equipment calculations supported the assessment of process requirements and design parameters.
 
 ### 3. Reactor Design and Sensitivity Analysis
 
-Investigated the influence of reactor dimensions on conversion while maintaining a length-to-diameter ratio of 3 in the reported sensitivity study.
+The influence of reactor dimensions on reactant conversion was investigated while maintaining a length-to-diameter ratio of 3 in the reported sensitivity study.
 
 The reported optimum reactor tube lengths were:
 
-| Reactor | Optimum length |
+| Reactor | Optimum tube length |
 |---|---:|
 | Pre-reformer | 2 m |
 | Primary reformer | 5 m |
 | Secondary reformer | 1 m |
-| High-temperature shift converter | 3 m |
-| Low-temperature shift converter | 5 m |
+| High-temperature shift converter (HTS) | 3 m |
+| Low-temperature shift converter (LTS) | 5 m |
 | Methanator | 2 m |
+
+> **Figure 2:** Sensitivity analysis illustrating the relationship between reactor dimensions and conversion.
 
 ![Reactor length sensitivity analysis](images/reactor_length_sensitivity.png)
 
 ### 4. Operating-Parameter Optimization
 
-Sensitivity analyses examined three operating parameters:
+Sensitivity analyses were conducted to investigate the influence of three operating parameters:
 
 - **Steam-to-carbon ratio:** The reported optimum was 2.8, balancing hydrogen production and steam-related energy demand.
-- **Primary reformer outlet temperature:** The reported optimum was 734°C, balancing conversion improvement against increasing energy consumption.
+- **Primary reformer outlet temperature:** The reported optimum was 734°C.
 - **Air-to-carbon ratio:** The reported optimum was 1.9, considering methane conversion, hydrogen production, and nitrogen dilution.
+
+> **Figure 3:** Sensitivity analyses of key operating parameters.
 
 ![Operating parameter optimization](images/operating_parameter_optimization.png)
 
-### 5. Equipment Design and Process Safety
+### 5. Equipment Design and Economic Evaluation
 
-The project also included:
+The project included selected equipment-design calculations and a preliminary economic assessment, covering:
 
-- Primary reformer and high-temperature shift converter design calculations.
-- Heat-exchanger sizing, heat duty, LMTD, overall heat-transfer coefficient, and pressure-drop calculations.
-- Preliminary equipment-cost and plant economic estimates.
-- Process control-loop diagrams and HAZOP analysis of the primary reformer section.
+- Reactor and converter design.
+- Heat-exchanger calculations, including heat duty, log mean temperature difference (LMTD), overall heat-transfer coefficient, and pressure drop.
+- Equipment cost estimation and capital investment.
+- Operating-cost and payback-period estimates.
 
-## Key Findings
+### 6. Process Control and Safety
 
-- Sensitivity analysis identified reactor dimensions beyond which additional length produced limited improvement in conversion.
+The project also addressed process control and safety through:
+
+- Instrumentation and process control-loop diagrams.
+- Identification of key process variables.
+- HAZOP analysis of the primary reformer section.
+
+## <u>Key Findings</u>
+
+- Reactor-length sensitivity analysis identified dimensions beyond which additional length produced limited improvement in conversion.
 - The reported operating-parameter optima were a steam-to-carbon ratio of 2.8, primary reformer outlet temperature of 734°C, and air-to-carbon ratio of 1.9.
-- The thesis concluded that the plant was already operating near its optimum conditions, with limited potential for further energy-index improvement through the studied adjustments alone.
-- The project connected process simulation and equipment design with energy assessment, economic estimation, and process safety.
+- The project evaluated process design and operating conditions in relation to conversion and energy requirements.
+- Preliminary economic analysis was conducted to estimate investment requirements and payback period.
 
-These findings reflect the reported study; the project did not establish a quantified plant-wide percentage reduction in energy consumption.
+The project report concluded that the plant was already operating near its optimum conditions, with limited potential for further energy-index improvement through the studied adjustments alone. No quantified plant-wide energy reduction is claimed here.
 
-## Tools and Engineering Skills
+## <u>Tools and Engineering Skills</u>
 
 - Aspen Plus V14
 - Chemical process simulation
@@ -103,25 +122,24 @@ These findings reflect the reported study; the project did not establish a quant
 - LHHW reaction kinetics
 - Reactor design and sensitivity analysis
 - Heat-exchanger design
-- Preliminary economic analysis
+- Preliminary economic evaluation
 - Process control and HAZOP
 
-## Project Information
+## <u>Project Information</u>
 
-- **Project type:** Undergraduate final-year design thesis
-- **Institution:** School of Chemical and Materials Engineering, National University of Sciences and Technology (NUST), Pakistan
+- **Project type:** Final Year Design Project
+- **Degree:** Bachelor of Engineering in Chemical Engineering
+- **Institution:** National University of Sciences and Technology (NUST), Pakistan
 - **Year:** 2025
-- **Team project:** The thesis lists Mehwish Akhtar as team leader.
-- **Supervisor:** Dr. Muhammad Adnan
+- **Project format:** Team-based academic project
 
-## Scope and Limitations
+## <u>Scope and Limitations</u>
 
-The project was an academic process-design and simulation study. Its findings should be interpreted within the assumptions and models documented in the thesis. The reported sensitivity optima do not, by themselves, demonstrate a measured improvement in an operating plant.
+This was an academic process-design and simulation study. The reported findings depend on the assumptions, models, and operating conditions documented in the project report. The sensitivity-analysis optima do not, by themselves, establish experimentally validated performance improvements in an operating plant.
 
-## Future Work
+## <u>Future Work</u>
 
-- Quantify energy-index changes against a clearly defined baseline.
+- Quantify changes in energy index against a clearly defined baseline.
 - Investigate heat integration and waste-heat recovery opportunities.
-- Validate simulation outputs against reliable plant or published reference data.
-- Extend the optimization to additional process and utility constraints.
-
+- Validate simulation results against reliable plant data or published reference cases.
+- Extend optimization to additional process and utility constraints.
